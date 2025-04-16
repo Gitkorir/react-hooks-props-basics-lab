@@ -11,8 +11,14 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      {/* pass name and city to home */}
+      <Home name={user.name} city={user.city} color={user.color} />
+      {/*pass bio github,and linkedin to about */}
+      <About
+        bio={user.bio}
+        github={user.links.github}
+        linkedin={user.links.linkedin}
+      />
     </div>
   );
 }
